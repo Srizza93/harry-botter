@@ -8,7 +8,9 @@ module.exports = {
     await interaction.channel
       .createInvite()
       .then((invite) =>
-        interaction.reply(`Created an invite with a code of ${invite.code}`)
+        interaction.reply(
+          `Share the following link https://discord.gg/${invite.code}`
+        )
       )
       .catch(console.error);
   },

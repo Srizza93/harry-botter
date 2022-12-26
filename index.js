@@ -4,7 +4,14 @@ const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
 const { token } = require("./config.json");
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
+  ws: {
+    properties: {
+      large_threshold: 20,
+    },
+  },
+});
 
 client.commands = new Collection();
 
@@ -49,8 +56,17 @@ client.on(Events.InteractionCreate, async (interaction) => {
     console.error(error);
     await interaction.reply({
       content: "There was an error while executing this command!",
-      ephemeral: true,
     });
+  }
+});
+
+// Add a Default role to each new member
+client.on(Events.GuildMemberAdd, (member) => {
+  try {
+    member.roles.add("1056943715882651759");
+    console.log(member.user.id + " is in da house");
+  } catch (error) {
+    console.error(error);
   }
 });
 
