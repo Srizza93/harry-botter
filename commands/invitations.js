@@ -3,8 +3,9 @@ const { SlashCommandBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("invitations")
-    .setDescription("Automatically invite users to your server"),
+    .setDescription("Generate an invitation link"),
   async execute(interaction) {
+    if (!interaction.isChatInputCommand()) return;
     await interaction.channel
       .createInvite()
       .then((invite) =>

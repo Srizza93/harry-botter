@@ -6,11 +6,6 @@ const { token } = require("./config.json");
 // Create a new client instance
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
-  ws: {
-    properties: {
-      large_threshold: 20,
-    },
-  },
 });
 
 client.commands = new Collection();
@@ -63,8 +58,17 @@ client.on(Events.InteractionCreate, async (interaction) => {
 // Add a Default role to each new member
 client.on(Events.GuildMemberAdd, (member) => {
   try {
-    member.roles.add("1056943715882651759");
-    console.log(member.user.id + " is in da house");
+    const role = member.guild.roles.cache.find(
+      (role) => role.name === "discorder"
+    );
+    if (role) {
+      member.roles.add(role);
+      console.log(member.user.id + " is in da house");
+    } else {
+      console.log(
+        `The role discorder was not assigned to '${member}' as it wasn't created`
+      );
+    }
   } catch (error) {
     console.error(error);
   }
