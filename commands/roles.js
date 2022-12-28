@@ -24,7 +24,7 @@ module.exports = {
         );
 
         if (role) {
-          const members = role.members.map((member) => member.id).join(", ");
+          const members = role.members.map((member) => member).join(", ");
           if (members) {
             interaction.reply({
               content: `Members: ${members}`,
