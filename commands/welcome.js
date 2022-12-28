@@ -97,19 +97,15 @@ module.exports = {
     await interaction.reply("Only Admin can use this command");
   },
   async createWebhook(interaction, welcome) {
-    const embed = new EmbedBuilder().setTitle("Some Title").setColor(0x00ffff);
-    const excludedRoles = ["discorder", "simoneBot", "@everyone"];
-    const enumKeys = ["Primary", "Secondary", "Success", "Danger", "Link"];
-    let index = -1;
+    const embed = new EmbedBuilder().setTitle("Role Button").setColor(0x00ffff);
 
     const rolesButtons = interaction.guild.roles.cache
-      .filter((role) => !excludedRoles.includes(role.name))
+      .filter((role) => role.name.endsWith("-role"))
       .map((role) => {
-        index++;
         return new ButtonBuilder()
           .setCustomId(role.name)
           .setLabel(role.name)
-          .setStyle(ButtonStyle[enumKeys[index]]);
+          .setStyle(ButtonStyle["Primary"]);
       });
     await interaction.guild.channels
       .create({
