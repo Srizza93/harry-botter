@@ -21,8 +21,14 @@ Commands are deployed from deploy-commands.js and then they are executed via ind
 
 # Slash Commands
 
-- "welcome" => welcome.js => Creates a private welcome text channel and a default role which will be assigned when entering the server. Then the user can choose their new role and loose the default role via the text channel.
+- "welcome" => welcome.js => Creates a private welcome text channel and a default role which will be assigned when entering the server. Then the user can choose their new role and lose the default role via the text channel.
 - "roles" => roles.js => Requests an input for the desired role and lists all the members ids of it.
 - "channels" => channels.js => Requests an input for the category name and creates a category, a text and a voice channel.
 - "invitations" => invitations.js => Generates a link invitation.
 - "ping" => ping.js => Pings a user
+
+# Instructions
+
+1. First create all the necessary channels (/channels) for the server, this will also create a role for each channel.
+2. Then, you can create the welcome page (/welcome), for users to pick their role.
+3. Start sharing your discord link (/invitations).
