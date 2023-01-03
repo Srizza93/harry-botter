@@ -31,7 +31,7 @@ module.exports = {
         interaction.guild.members.cache.forEach((member) => {
           if (
             member.user.id !== adminId &&
-            member.user.username !== "simoneBot"
+            member.user.username !== "Harry Botter"
           ) {
             member.kick();
           }
