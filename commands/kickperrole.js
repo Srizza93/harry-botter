@@ -21,17 +21,25 @@ module.exports = {
 
         const role = interaction.guild.roles.cache.find(
           (role) => role.name === inputRole
-        ).id;
+        );
 
-        interaction.guild.members.cache.forEach((member) => {
-          if (
-            member._roles.includes(role) &&
-            member.user.id !== adminId &&
-            member.user.username !== "Harry Botter"
-          ) {
-            member.kick();
-          }
-        });
+        if (role) {
+          interaction.guild.members.cache.forEach((member) => {
+            if (
+              member._roles.includes(role.id) &&
+              member.user.id !== adminId &&
+              member.user.username !== "Harry Botter"
+            ) {
+              member.kick();
+            }
+          });
+        } else {
+          await interaction.reply({
+            content: "No users with this role",
+            ephemeral: true,
+          });
+          return;
+        }
       } catch (error) {
         console.log("Something went wrong " + error);
       }
