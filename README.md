@@ -3,7 +3,7 @@ Documentation
 To run
 
 ```
-git clone https://github.com/Srizza93/simone-bot.git
+git clone https://github.com/Srizza93/harry-botter.git
 
 npm install
 
