@@ -21,7 +21,7 @@ Commands are deployed from deploy-commands.js and then they are executed via ind
 
 # Slash Commands
 
-- "channels" => channels.js => Requests an input for the category name and creates a category, a text and a voice channel.
+- "channels" => channels.js => Requests an input for the category name and creates a category, a text and a voice channel, and an associated role.
 - "trainer" => trainer.js => Creates a private category for trainers, with a text and a voice channels.
 - "welcome" => welcome.js => Creates a private welcome text channel and a default role which will be assigned when entering the server. Then the user can choose their new role and lose the default role via the text channel.
 - "roles" => roles.js => Requests an input for the desired role and lists all the members ids of it.
