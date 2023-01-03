@@ -26,7 +26,6 @@ Les commandes sont déployées à partir de deploy-commands.js, puis elles sont 
 - "welcome" => welcome.js => Créer un canal de texte de bienvenue privé et un rôle par défaut qui sera attribué lors de l'entrée sur le serveur. Ensuite, l'utilisateur peut choisir son nouveau rôle et perdre le rôle par défaut via le canal de texte.
 - "roles" => roles.js => Demander un role et répertorier tous les identifiants de ses membres.
 - "kickperrole" => kickperrole.js => Demander un role et expulser tous les membres du rôle choisi.
-- "kickall" => kickall.js => Expulser tous les membres sauf l'administrateur et le bot, une question de sécurité est demandée.
 - "invitations" => invitations.js => Génèrer un lien d'invitation.
 
 # Instructions
@@ -34,4 +33,4 @@ Les commandes sont déployées à partir de deploy-commands.js, puis elles sont 
 1. Créez d'abord tous les canaux nécessaires (/channels) pour le serveur, cela créera également un rôle pour chaque canal.
 2. Ensuite, vous pouvez créer la page d'accueil (/welcome), pour que les utilisateurs choisissent leur rôle.
 3. Créez une catégorie de formateur (/trainer).
-4. Start sharing your discord link (/invitations).
+4. Commencez à partager votre lien discords (/invitations).
