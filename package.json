@@ -4,6 +4,7 @@
     "dev": "node deploy-commands.js & node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.7.1",
+    "express": "^4.18.2"
   }
 }

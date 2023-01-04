@@ -12,7 +12,7 @@ module.exports = {
         .setRequired(true)
     ),
   async execute(interaction) {
-    if (!interaction.isChatInputCommand()) return;
+    if (!interaction.isChatInputComamand()) return;
     if (interaction.user.id === adminId) {
       try {
         const inputRole = interaction.options.getString("input");

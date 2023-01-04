@@ -1,3 +1,4 @@
+const server = require("./server");
 const fs = require("node:fs");
 const path = require("node:path"); // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
@@ -7,6 +8,8 @@ const { token } = require("./config.json");
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
 });
+
+server(client);
 
 client.commands = new Collection();
 

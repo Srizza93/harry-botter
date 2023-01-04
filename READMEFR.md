@@ -33,4 +33,4 @@ Les commandes sont déployées à partir de deploy-commands.js, puis elles sont 
 1. Créez d'abord tous les canaux nécessaires (/channels) pour le serveur, cela créera également un rôle pour chaque canal.
 2. Ensuite, vous pouvez créer la page d'accueil (/welcome), pour que les utilisateurs choisissent leur rôle.
 3. Créez une catégorie de formateur (/trainer).
-4. Commencez à partager votre lien discords (/invitations).
+4. Commencez à partager votre lien discord (/invitations).

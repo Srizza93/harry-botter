@@ -23,7 +23,7 @@ const rest = new REST({ version: "10" }).setToken(token);
 (async () => {
   try {
     console.log(
-      `Started refreshing ${commands.length} application (/) commands.`
+      `Started refreshing ${commands.length} applications (/) commands.`
     );
 
     // The put method is used to fully refresh all commands in the guild with the current set
@@ -33,7 +33,7 @@ const rest = new REST({ version: "10" }).setToken(token);
     );
 
     console.log(
-      `Successfully reloaded ${data.length} application (/) commands.`
+      `Successfully reloaded ${data.length} applications (/) commands.`
     );
   } catch (error) {
     // And of course, make sure you catch and log any errors!
