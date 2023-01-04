@@ -78,7 +78,6 @@ module.exports = {
         ])
           .then((results) => {
             createCategory.permissionOverwrites.create(results[0].id, {
-              type: 0,
               ViewChannel: true,
               SendMessages: true,
             });
